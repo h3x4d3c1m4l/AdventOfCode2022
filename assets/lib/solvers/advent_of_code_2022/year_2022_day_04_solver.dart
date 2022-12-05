@@ -15,7 +15,7 @@ class Year2022Day04Solver extends Solver<String, String> {
         .toList();
 
     // part 1
-    int nAssignmentPairsFullyContainingOtherAssignmentPairs = 0;
+    int nAssignmentPairsFullOverlap = 0;
     for (Tuple2<String, String> rawAssignmentpair in rawAssignmentPairs) {
       List<int> assignment1 =
           rawAssignmentpair.item1.split('-').map((rawAssignment) => int.parse(rawAssignment)).toList();
@@ -24,27 +24,27 @@ class Year2022Day04Solver extends Solver<String, String> {
 
       if ((assignment1[0] >= assignment2[0] && assignment1[1] <= assignment2[1]) ||
           (assignment2[0] >= assignment1[0] && assignment2[1] <= assignment1[1])) {
-        nAssignmentPairsFullyContainingOtherAssignmentPairs++;
+        nAssignmentPairsFullOverlap++;
       }
     }
 
     // part 2
-    int nAssignmentPairsOverlappingWithOtherAssignmentPairs = 0;
-    for (Tuple2<String, String> rawAssignmentpair in rawAssignmentPairs) {
+    int nAssignmentPairsPartialOverlap = 0;
+    for (Tuple2<String, String> rawAssignmentPair in rawAssignmentPairs) {
       List<int> assignment1 =
-          rawAssignmentpair.item1.split('-').map((rawAssignment) => int.parse(rawAssignment)).toList();
+          rawAssignmentPair.item1.split('-').map((rawAssignment) => int.parse(rawAssignment)).toList();
       List<int> assignment2 =
-          rawAssignmentpair.item2.split('-').map((rawAssignment) => int.parse(rawAssignment)).toList();
+          rawAssignmentPair.item2.split('-').map((rawAssignment) => int.parse(rawAssignment)).toList();
 
       if ((assignment1[0] >= assignment2[0] && assignment1[0] <= assignment2[1]) ||
           (assignment1[1] >= assignment2[0] && assignment1[1] <= assignment2[1]) ||
           (assignment2[0] >= assignment1[0] && assignment2[0] <= assignment1[1]) ||
           (assignment2[1] >= assignment1[0] && assignment2[1] <= assignment1[1])) {
-        nAssignmentPairsOverlappingWithOtherAssignmentPairs++;
+        nAssignmentPairsPartialOverlap++;
       }
     }
 
-    return 'X: $nAssignmentPairsFullyContainingOtherAssignmentPairs, Y: $nAssignmentPairsOverlappingWithOtherAssignmentPairs';
+    return 'Assignment pairs with full overlap: $nAssignmentPairsFullOverlap\nAssignment pairs with partial overlap: $nAssignmentPairsPartialOverlap';
   }
 
 }
