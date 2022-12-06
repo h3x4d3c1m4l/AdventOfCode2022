@@ -15,9 +15,9 @@ const RESOURCES = {
 "canvaskit/canvaskit.wasm": "bf50631470eb967688cca13ee181af62",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
-"index.html": "1de7250997856885a07ca71d46cc4148",
-"/": "1de7250997856885a07ca71d46cc4148",
-"main.dart.js": "6c760a163ad9a84f5afc8b65eab7f3fd",
+"index.html": "e353fef6d87815f345bb688f4cba85d7",
+"/": "e353fef6d87815f345bb688f4cba85d7",
+"main.dart.js": "a4b1779b6494571427d1bb0c5bbea11f",
 "assets/NOTICES": "827c31843d449da1864f76ad902717c2",
 "assets/packages/fluent_ui/fonts/FluentIcons.ttf": "1cd173aed13e298ab2663dd0924f6762",
 "assets/packages/fluent_ui/assets/AcrylicNoise.png": "81f27726c45346351eca125bd062e9a7",
@@ -27,12 +27,13 @@ const RESOURCES = {
 "assets/lib/solvers/advent_of_code_2022/year_2022_day_02_solver.dart": "9269b4db8476271192517fc118d2c2f5",
 "assets/lib/solvers/advent_of_code_2022/year_2022_day_01_solver.dart": "c9399d023034742fbd0406aca948c2c8",
 "assets/lib/solvers/advent_of_code_2022/year_2022_day_03_solver.dart": "7fb3bc590235b792b9671015ff991229",
+"assets/lib/solvers/advent_of_code_2022/year_2022_day_06_solver.dart": "d09b4b9a9e75e57ba6fdedbc9dce6029",
 "assets/lib/solvers/advent_of_code_2022/year_2022_day_04_solver.dart": "82d05abb1a1c328a87712ab8036e0ff2",
-"assets/lib/solvers/advent_of_code_2022/_all_solvers.dart": "f3c556fa61db746862f59e1d2ae24682",
+"assets/lib/solvers/advent_of_code_2022/_all_solvers.dart": "6a648ced2b6e698664792ccbc93f79df",
 "assets/lib/solvers/advent_of_code_2022/year_2022_day_05_solver.dart": "27b6b0ba9e4bedc1142815795bb6d929",
 "assets/shaders/ink_sparkle.frag": "7ff7388e83c41d3004d4335a0e6dca0c",
 "assets/FontManifest.json": "b417c8197e08be3f18101f9b01bf0e45",
-"assets/AssetManifest.json": "9b52e36bb5a8334c7470953ec2a82b9f",
+"assets/AssetManifest.json": "e0b1fd4e01c422c86945a53b7498e90f",
 "assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b"
 };
 
