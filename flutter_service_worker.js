@@ -15,9 +15,9 @@ const RESOURCES = {
 "canvaskit/canvaskit.wasm": "bf50631470eb967688cca13ee181af62",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
-"index.html": "420dd877e743d10adb35c6f9da7aba73",
-"/": "420dd877e743d10adb35c6f9da7aba73",
-"main.dart.js": "d7c8478d03f9b37f20ceb9cb477bacb4",
+"index.html": "01fe094b0ef7f5ca2ae287cc797c4e6c",
+"/": "01fe094b0ef7f5ca2ae287cc797c4e6c",
+"main.dart.js": "9e9222fd3ee8300599f79baf78ede422",
 "assets/NOTICES": "c23167ef7a64a96a264153d89007e27c",
 "assets/packages/fluent_ui/fonts/FluentIcons.ttf": "1cd173aed13e298ab2663dd0924f6762",
 "assets/packages/fluent_ui/assets/AcrylicNoise.png": "81f27726c45346351eca125bd062e9a7",
@@ -35,8 +35,9 @@ const RESOURCES = {
 "assets/lib/solvers/advent_of_code_2022/year_2022_day_05_solver.dart": "27b6b0ba9e4bedc1142815795bb6d929",
 "assets/shaders/ink_sparkle.frag": "7ff7388e83c41d3004d4335a0e6dca0c",
 "assets/FontManifest.json": "b417c8197e08be3f18101f9b01bf0e45",
-"assets/AssetManifest.json": "e13f492761b4b1fb101691784536a0fe",
-"assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b"
+"assets/AssetManifest.json": "9cbc1de2c507f1e129ad06da75de8881",
+"assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
+"assets/assets/google_fonts/Inconsolata-Regular.ttf": "e264f34eef25b5af18c240ecfca2d67b"
 };
 
 // The application shell files that are downloaded before a service worker can
