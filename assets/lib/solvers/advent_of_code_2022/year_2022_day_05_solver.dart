@@ -6,7 +6,10 @@ import 'package:string_scanner/string_scanner.dart';
 class Year2022Day05Solver extends Solver<String, String> {
 
   @override
-  String get dartCodeFilename => 'year_2022_day_05_solver.dart';
+  String get problemUrl => 'https://adventofcode.com/2022/day/5';
+
+  @override
+  String get solverCodeFilename => 'year_2022_day_05_solver.dart';
 
   static final RegExp numberRegExp = RegExp(r'\d+');
   

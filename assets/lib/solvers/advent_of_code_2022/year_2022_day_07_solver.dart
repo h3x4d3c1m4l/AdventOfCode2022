@@ -4,7 +4,10 @@ import 'package:darq/darq.dart';
 class Year2022Day07Solver extends Solver<String, String> {
 
   @override
-  String get dartCodeFilename => 'year_2022_day_07_solver.dart';
+  String get problemUrl => 'https://adventofcode.com/2022/day/7';
+
+  @override
+  String get solverCodeFilename => 'year_2022_day_07_solver.dart';
   
   @override
   String getSolution(String input) {
