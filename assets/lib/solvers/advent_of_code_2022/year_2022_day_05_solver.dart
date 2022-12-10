@@ -80,7 +80,7 @@ class Year2022Day05Solver extends Solver<String, String> {
   List<ListQueue<String>> _getInitialStacksFromInput(List<String> inputLines) {
     // create empty list of crate stacks
     int nCrateStacks = (inputLines[0].length / 4).ceil();
-    List<ListQueue<String>> crateStacks = List.generate(nCrateStacks, (_) => ListQueue<String>(), growable: false);
+    List<ListQueue<String>> crateStacks = List.filled(nCrateStacks, ListQueue<String>(), growable: false);
 
     // read initial crate stacks
     for (int i = 0; i < inputLines.length; i++) {
