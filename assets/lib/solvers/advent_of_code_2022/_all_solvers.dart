@@ -8,3 +8,4 @@ export 'year_2022_day_07_solver.dart';
 export 'year_2022_day_08_solver.dart';
 export 'year_2022_day_09_solver.dart';
 export 'year_2022_day_10_solver.dart';
+export 'year_2022_day_13_solver.dart';
