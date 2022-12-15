@@ -2,9 +2,11 @@ import 'dart:core';
 import 'dart:math';
 
 import 'package:aoc22/solvers/solver.dart';
-import 'package:darq/darq.dart';
+import 'package:darq/darq.dart' hide Tuple2;
 import 'package:petitparser/petitparser.dart';
-import 'package:tuple/tuple.dart' as tuple;
+import 'package:tuple/tuple.dart';
+
+typedef PacketPair = Tuple2<List, List>;
 
 class Year2022Day13Solver extends Solver<String, String> {
 
@@ -17,12 +19,12 @@ class Year2022Day13Solver extends Solver<String, String> {
   @override
   String getSolution(String input) {
     String inputTrimmed = input.trim();
-    List<tuple.Tuple2<List, List>> pairs = _parsePairs(inputTrimmed);
+    List<PacketPair> pairs = _parsePairs(inputTrimmed);
 
     // part 1
     int sumOfIndices = 0;
     for (int i = 0; i < pairs.length; i++) {
-      tuple.Tuple2<List, List> pair = pairs[i];
+      PacketPair pair = pairs[i];
       if (_testOrder(pair.item1, pair.item2) == true) {
         sumOfIndices += i + 1;
       }
@@ -83,7 +85,7 @@ class Year2022Day13Solver extends Solver<String, String> {
     return null;
   }
 
-  List<tuple.Tuple2<List, List>> _parsePairs(String input) {
+  List<PacketPair> _parsePairs(String input) {
     // integer
     final Parser<int> number = digit().plus().flatten().trim().map(int.parse);
 
@@ -95,11 +97,11 @@ class Year2022Day13Solver extends Solver<String, String> {
     array.set((char('[') & arrayContents & char(']')).map((value) => value[1]));
 
     // packets
-    final Parser<tuple.Tuple2<List, List>> pairOfPackets =
-        (array & string('\n') & array).map((rawParsed) => tuple.Tuple2<List, List>(rawParsed[0], rawParsed[2]));
-    final Parser<List<tuple.Tuple2<List, List>>> pairsOfPackets = (pairOfPackets & (string('\n\n') | endOfInput()))
+    final Parser<PacketPair> pairOfPackets =
+        (array & string('\n') & array).map((rawParsed) => PacketPair(rawParsed[0], rawParsed[2]));
+    final Parser<List<PacketPair>> pairsOfPackets = (pairOfPackets & (string('\n\n') | endOfInput()))
         .star()
-        .map((rawParsedPairs) => rawParsedPairs.map((rawParsedPair) => rawParsedPair[0] as tuple.Tuple2<List, List>).toList())
+        .map((rawParsedPairs) => rawParsedPairs.map((rawParsedPair) => rawParsedPair[0] as PacketPair).toList())
         .end();
 
     return pairsOfPackets.parse(input).value;
