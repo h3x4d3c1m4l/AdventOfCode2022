@@ -3,13 +3,13 @@ import 'dart:collection';
 import 'package:aoc22/solvers/solver.dart';
 import 'package:string_scanner/string_scanner.dart';
 
-class Year2022Day05Solver extends Solver<String, String> {
+class Day05Solver extends Solver<String, String> {
 
   @override
   String get problemUrl => 'https://adventofcode.com/2022/day/5';
 
   @override
-  String get solverCodeFilename => 'year_2022_day_05_solver.dart';
+  String get solverCodeFilename => 'day_05_solver.dart';
 
   static final RegExp numberRegExp = RegExp(r'\d+');
   

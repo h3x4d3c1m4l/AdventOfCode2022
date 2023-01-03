@@ -1,10 +1,12 @@
+import 'package:aoc22/solvers/solver.dart';
 import 'package:aoc22/views/problem_solver_view.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
-import 'solvers/_all_solvers.dart';
+import 'package:aoc22/solvers/advent_of_code/2021/_all_solvers.dart' as aoc2021;
+import 'package:aoc22/solvers/advent_of_code/2022/_all_solvers.dart' as aoc2022;
 
 void main() {
   // add OFL for Inconsolata font
@@ -43,7 +45,9 @@ class _MyAppState extends State<MyApp> {
         ),
         pane: NavigationPane(
           selected: _topIndex,
-          onChanged: (index) => setState(() => _topIndex = index),
+          onChanged: (index) => setState(() {
+            _topIndex = index;
+          }),
           items: _getPaneItems(),
         ),
       ),
@@ -70,8 +74,8 @@ class _MyAppState extends State<MyApp> {
       title: const Text('Advent of Code 2021'),
       body: const Center(child: Text("Choose a day from the sub menu")),
       items: [
-        _getAdventOfCodePaneItem(2021, 01, Year2021Day01Solver()),
-        _getAdventOfCodePaneItem(2021, 02, Year2021Day02Solver()),
+        _getAdventOfCodePaneItem(2021, 01, aoc2021.Day01Solver()),
+        _getAdventOfCodePaneItem(2021, 02, aoc2021.Day02Solver()),
       ],
     );
   }
@@ -82,18 +86,18 @@ class _MyAppState extends State<MyApp> {
       title: const Text('Advent of Code 2022'),
       body: const Center(child: Text("Choose a day from the sub menu")),
       items: [
-        _getAdventOfCodePaneItem(2022, 01, Year2022Day01Solver()),
-        _getAdventOfCodePaneItem(2022, 02, Year2022Day02Solver()),
-        _getAdventOfCodePaneItem(2022, 03, Year2022Day03Solver()),
-        _getAdventOfCodePaneItem(2022, 04, Year2022Day04Solver()),
-        _getAdventOfCodePaneItem(2022, 05, Year2022Day05Solver()),
-        _getAdventOfCodePaneItem(2022, 06, Year2022Day06Solver()),
-        _getAdventOfCodePaneItem(2022, 07, Year2022Day07Solver()),
-        _getAdventOfCodePaneItem(2022, 08, Year2022Day08Solver()),
-        _getAdventOfCodePaneItem(2022, 09, Year2022Day09Solver()),
-        _getAdventOfCodePaneItem(2022, 10, Year2022Day10Solver()),
-        _getAdventOfCodePaneItem(2022, 13, Year2022Day13Solver()),
-        _getAdventOfCodePaneItem(2022, 14, Year2022Day14Solver()),
+        _getAdventOfCodePaneItem(2022, 01, aoc2022.Day01Solver()),
+        _getAdventOfCodePaneItem(2022, 02, aoc2022.Day02Solver()),
+        _getAdventOfCodePaneItem(2022, 03, aoc2022.Day03Solver()),
+        _getAdventOfCodePaneItem(2022, 04, aoc2022.Day04Solver()),
+        _getAdventOfCodePaneItem(2022, 05, aoc2022.Day05Solver()),
+        _getAdventOfCodePaneItem(2022, 06, aoc2022.Day06Solver()),
+        _getAdventOfCodePaneItem(2022, 07, aoc2022.Day07Solver()),
+        _getAdventOfCodePaneItem(2022, 08, aoc2022.Day08Solver()),
+        _getAdventOfCodePaneItem(2022, 09, aoc2022.Day09Solver()),
+        _getAdventOfCodePaneItem(2022, 10, aoc2022.Day10Solver()),
+        _getAdventOfCodePaneItem(2022, 13, aoc2022.Day13Solver()),
+        _getAdventOfCodePaneItem(2022, 14, aoc2022.Day14Solver()),
       ],
     );
   }

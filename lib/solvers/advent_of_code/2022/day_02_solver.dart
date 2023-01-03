@@ -1,12 +1,12 @@
 import 'package:aoc22/solvers/solver.dart';
 
-class Year2022Day02Solver extends Solver<String, String> {
+class Day02Solver extends Solver<String, String> {
 
   @override
   String get problemUrl => 'https://adventofcode.com/2022/day/2';
 
   @override
-  String get solverCodeFilename => 'year_2022_day_02_solver.dart';
+  String get solverCodeFilename => 'day_02_solver.dart';
   
   @override
   String getSolution(String input) {

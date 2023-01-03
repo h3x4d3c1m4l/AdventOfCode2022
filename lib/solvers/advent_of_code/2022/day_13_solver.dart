@@ -8,13 +8,13 @@ import 'package:tuple/tuple.dart';
 
 typedef PacketPair = Tuple2<List, List>;
 
-class Year2022Day13Solver extends Solver<String, String> {
+class Day13Solver extends Solver<String, String> {
 
   @override
   String get problemUrl => 'https://adventofcode.com/2022/day/13';
 
   @override
-  String get solverCodeFilename => 'year_2022_day_13_solver.dart';
+  String get solverCodeFilename => 'day_13_solver.dart';
   
   @override
   String getSolution(String input) {

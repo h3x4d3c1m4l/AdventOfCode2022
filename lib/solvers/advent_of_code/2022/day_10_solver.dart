@@ -3,13 +3,13 @@ import 'dart:core';
 import 'package:aoc22/solvers/solver.dart';
 import 'package:tuple/tuple.dart';
 
-class Year2022Day10Solver extends Solver<String, String> {
+class Day10Solver extends Solver<String, String> {
 
   @override
   String get problemUrl => 'https://adventofcode.com/2022/day/10';
 
   @override
-  String get solverCodeFilename => 'year_2022_day_10_solver.dart';
+  String get solverCodeFilename => 'day_10_solver.dart';
   
   @override
   String getSolution(String input) {
